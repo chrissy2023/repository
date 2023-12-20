@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anbaiju <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: lmoricon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/15 10:26:33 by anbaiju           #+#    #+#             */
-/*   Updated: 2023/12/15 10:33:58 by anbaiju          ###   ########.fr       */
+/*   Created: 2023/12/12 10:47:16 by lmoricon          #+#    #+#             */
+/*   Updated: 2023/12/16 19:09:56 by lmoricon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
-int	ft_strlen(char	*str)
+int	main(int argc, char **argv)
 {
 	int	i;
 
+	(void) argc;
 	i = 0;
-	while (str[i] != '\0')
+	while (argv[0][i])
 	{
+		write(1, &argv[0][i], 1);
 		i++;
 	}
-	return (i);
+	write(1, "\n", 1);
+	return (0);
 }
-/*ex
-int	main(void)
-{
-	printf("%i", ft_strlen("42HelloWorld"));
-}*/

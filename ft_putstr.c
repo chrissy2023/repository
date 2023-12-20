@@ -3,18 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cparovel <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: anbaiju <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/13 16:33:05 by cparovel          #+#    #+#             */
-/*   Updated: 2023/12/13 22:39:10 by cparovel         ###   ########.fr       */
+/*   Created: 2023/12/15 10:42:26 by anbaiju           #+#    #+#             */
+/*   Updated: 2023/12/15 10:43:05 by anbaiju          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
-void	ft_putstr(char *str)
+void	ft_putstr(char	*str)
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
@@ -23,3 +24,8 @@ void	ft_putstr(char *str)
 		i++;
 	}
 }
+/*
+int	main(void)
+{
+	ft_putstr("hello World!");
+}*/

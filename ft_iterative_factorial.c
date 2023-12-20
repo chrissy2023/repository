@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anbaiju <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: lpennisi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/15 10:26:33 by anbaiju           #+#    #+#             */
-/*   Updated: 2023/12/15 10:33:58 by anbaiju          ###   ########.fr       */
+/*   Created: 2023/12/16 15:44:18 by lpennisi          #+#    #+#             */
+/*   Updated: 2023/12/16 15:45:15 by lpennisi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-
-int	ft_strlen(char	*str)
+int	ft_iterative_factorial(int nb)
 {
-	int	i;
+	int	res;
 
-	i = 0;
-	while (str[i] != '\0')
+	if (nb < 0)
+		return (0);
+	res = 1;
+	while (nb > 0)
 	{
-		i++;
+		res *= nb;
+		nb--;
 	}
-	return (i);
+	return (res);
 }
-/*ex
-int	main(void)
-{
-	printf("%i", ft_strlen("42HelloWorld"));
-}*/
